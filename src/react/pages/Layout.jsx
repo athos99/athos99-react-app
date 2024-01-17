@@ -4,8 +4,12 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Tabs from "@mui/material/Tabs";
+
 //import Link from "./../../components/Link";
 import Button from "./../components/Button";
+import TabLink from "./../components/TabLink";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const darkTheme = createTheme({
@@ -29,7 +33,7 @@ const darkTheme = createTheme({
   },
 });
 const Layout = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(true);
+  //  const [anchorElNav, setAnchorElNav] = React.useState(true);
   return (
     <>
       <ThemeProvider theme={darkTheme}>
@@ -41,6 +45,11 @@ const Layout = () => {
               <Button href="/blogs">Blog</Button>
               <Button href="/contact">Contact</Button>
             </Box>
+          </Toolbar>
+          <Toolbar>
+            <Tabs>
+              <TabLink label="essai" href="/"></TabLink>
+            </Tabs>
           </Toolbar>
         </AppBar>
 

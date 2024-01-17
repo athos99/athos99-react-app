@@ -3,14 +3,14 @@ import { NavLink as ReactRouterLink, useMatch } from "react-router-dom";
 
 import React from "react";
 
-const Button = (prop) => {
-  const match = useMatch(prop.href);
-  console.log(prop, match ? true : false);
+const Button = (allProps) => {
+  const match = useMatch(allProps.href);
+  console.log(allProps.href, match ? true : false);
   return (
     <MuiButton
-      {...prop}
+      {...allProps}
       component={ReactRouterLink}
-      to={prop.href ?? "#"}
+      to={allProps.href ?? "#"}
       selected={match ? true : false}
     />
   );
