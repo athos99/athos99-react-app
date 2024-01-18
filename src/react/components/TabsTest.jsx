@@ -2,9 +2,10 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Box from "@mui/material/Box";
 import TabLink from "./TabLink";
+import { useHref } from "react-router-dom";
 
-export default function TbasTest() {
-  const [value, setValue] = React.useState("one");
+export default function TabsTest() {
+  const [value, setValue] = React.useState(useHref());
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -13,9 +14,9 @@ export default function TbasTest() {
   return (
     <Box sx={{ width: "100%" }}>
       <Tabs value={value} onChange={handleChange}>
-        <TabLink value="one" href="/" label="Item One" />
-        <TabLink value="two" href="/blogs" label="Item Two" />
-        <TabLink value="three" href="/contact" label="Item Three" />
+        <TabLink href="/" label="Item One" />
+        <TabLink href="/blogs" label="Item Two" />
+        <TabLink href="/contact" label="Item Three" />
       </Tabs>
     </Box>
   );

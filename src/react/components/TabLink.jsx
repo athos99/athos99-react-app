@@ -10,6 +10,7 @@ const TabLink = (allProps) => {
     <MuiTab
       {...allProps}
       component={ReactRouterLink}
+      value={allProps.href ?? "#"}
       to={allProps.href ?? "#"}
       selected={match ? true : false}
     />

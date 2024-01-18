@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useHref } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -32,6 +32,7 @@ const darkTheme = createTheme({
   },
 });
 const Layout = () => {
+  console.log("layout" + useHref());
   //  const [anchorElNav, setAnchorElNav] = React.useState(true);
   return (
     <>
