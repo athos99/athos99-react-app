@@ -5,7 +5,7 @@ import React from "react";
 
 const Button = (allProps) => {
   const match = useMatch(allProps.href);
-  console.log(allProps.href, match ? true : false);
+  //console.log(allProps.href, match ? true : false);
   return (
     <MuiButton
       {...allProps}

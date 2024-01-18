@@ -10,7 +10,7 @@ export default function TabsTest() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  console.log("Tabtest" + value);
   return (
     <Box sx={{ width: "100%" }}>
       <Tabs value={value} onChange={handleChange}>
