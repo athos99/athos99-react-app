@@ -4,17 +4,16 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
+import TabsTest from "./../components/TabsTest";
 
 //import Link from "./../../components/Link";
 import Button from "./../components/Button";
-import TabLink from "./../components/TabLink";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    //mode: "dark",
     primary: {
       main: "#1976d2",
     },
@@ -37,6 +36,8 @@ const Layout = () => {
   return (
     <>
       <ThemeProvider theme={darkTheme}>
+        <TabsTest />
+
         <AppBar position="static">
           <Toolbar>
             <Typography>News</Typography>
@@ -45,11 +46,6 @@ const Layout = () => {
               <Button href="/blogs">Blog</Button>
               <Button href="/contact">Contact</Button>
             </Box>
-          </Toolbar>
-          <Toolbar>
-            <Tabs>
-              <TabLink label="essai" href="/"></TabLink>
-            </Tabs>
           </Toolbar>
         </AppBar>
 
