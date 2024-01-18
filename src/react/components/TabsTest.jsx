@@ -15,7 +15,7 @@ export default function TbasTest() {
       <Tabs value={value} onChange={handleChange}>
         <TabLink value="one" href="/" label="Item One" />
         <TabLink value="two" href="/blogs" label="Item Two" />
-        <TabLink value="three" href="/contacts" label="Item Three" />
+        <TabLink value="three" href="/contact" label="Item Three" />
       </Tabs>
     </Box>
   );
