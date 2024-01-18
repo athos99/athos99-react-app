@@ -37,11 +37,11 @@ const Layout = () => {
   return (
     <>
       <ThemeProvider theme={darkTheme}>
-        <TabsTest />
         <br />
         <AppBar position="static">
           <Toolbar>
             <Typography>News</Typography>
+            <TabsTest />
             <Box>
               <Button href="/">Home</Button>
               <Button href="/blogs">Blog</Button>

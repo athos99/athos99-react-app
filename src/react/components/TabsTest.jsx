@@ -13,10 +13,15 @@ export default function TabsTest() {
   console.log("Tabtest" + value);
   return (
     <Box sx={{ width: "100%" }}>
-      <Tabs value={value} onChange={handleChange}>
-        <TabLink href="/" label="Item One" />
-        <TabLink href="/blogs" label="Item Two" />
-        <TabLink href="/contact" label="Item Three" />
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        textColor="secondary"
+        indicatorColor="secondary"
+      >
+        <TabLink value="/" href="/" label="Item One" />
+        <TabLink value="/blogs" href="/blogs" label="Item Two" />
+        <TabLink value="/contact" href="/contact" label="Item Three" />
       </Tabs>
     </Box>
   );
