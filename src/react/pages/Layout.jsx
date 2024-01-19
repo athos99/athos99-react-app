@@ -42,17 +42,13 @@ const Layout = () => {
           <Toolbar>
             <Typography>News</Typography>
             <TabsTest />
-            <Box>
-              <Button href="/">Home</Button>
-              <Button href="/blogs">Blog</Button>
-              <Button href="/contact">Contact</Button>
-            </Box>
           </Toolbar>
         </AppBar>
-
-        <Button href="/">Home</Button>
-        <Button href="/blogs">blog</Button>
-        <Button href="/contact">contact</Button>
+        <Box>
+          <Button href="/">Home</Button>
+          <Button href="/blogs">Blog</Button>
+          <Button href="/contact">Contact</Button>
+        </Box>
         <Outlet />
       </ThemeProvider>
     </>
