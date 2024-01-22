@@ -21,9 +21,10 @@ export default function TabsTest() {
           sx: { bgcolor: blue[100] },
         }}
       >
-        <TabLink href="/" value="/" label="Item One" />
-        <TabLink href="/blogs" value="/blogs" label="Item Two" />
-        <TabLink href="/contact" value="/contact" label="Item Three" />
+        <TabLink href="/" value="/" label="Home" />
+        <TabLink href="/blog" value="/blog" label="Blog" />
+        <TabLink href="/contact" value="/contact" label="Contact" />
+        <TabLink href="/config" value="/config" label="Config" />
       </Tabs>
     </Box>
   );
