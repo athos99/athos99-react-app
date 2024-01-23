@@ -10,6 +10,7 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { useTheme } from "@mui/material/styles";
+import MonTableau from "./rubriques/MonTableau";
 
 const drawerWidth = "180px";
 
@@ -36,7 +37,7 @@ const Config = () => {
       content = <h1>Mail</h1>;
       break;
     case "inbox":
-      content = <h1>Inbox</h1>;
+      content = <MonTableau />;
       break;
     default:
       content = <h1>....</h1>;
