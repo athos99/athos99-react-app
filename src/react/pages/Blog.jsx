@@ -3,7 +3,6 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 
-/*
 const Item = ({ children }) => {
   return (
     <Grid xs={2}>
@@ -11,11 +10,11 @@ const Item = ({ children }) => {
     </Grid>
   );
 };
-*/
+
 const Blog = () => {
   let lines = [];
   for (let i = 0; i < 40; i++) {
-    // lines.push(<Item key={i}>Ligne {i}</Item>);
+    lines.push(<Item key={i}>Ligne {i}</Item>);
   }
 
   return (
