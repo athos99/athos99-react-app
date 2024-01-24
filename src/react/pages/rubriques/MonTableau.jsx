@@ -1,5 +1,6 @@
 import * as React from "react";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
+import Grid from "@mui/material/Unstable_Grid2";
 
 const rows = [
   {
@@ -18,18 +19,21 @@ const rows = [
 
 export default function MonTableau() {
   return (
-    <div style={{ height: 250, width: "100%" }}>
-      <DataGrid
-        columns={[
-          { field: "login", hideable: false },
-          { field: "age" },
-          { field: "desk" },
-        ]}
-        rows={rows}
-        slots={{
-          toolbar: GridToolbar,
-        }}
-      />
-    </div>
+    <Grid container spacing={10}>
+      <Grid xs={8}>
+        <p>xs=8</p>
+      </Grid>
+      <Grid xs={8}>
+        <DataGrid
+          columns={[
+            { field: "id" },
+            { field: "username", hideable: false },
+            { field: "age" },
+            { field: "desk" },
+          ]}
+          rows={rows}
+        />
+      </Grid>
+    </Grid>
   );
 }

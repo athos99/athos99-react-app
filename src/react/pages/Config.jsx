@@ -78,7 +78,6 @@ const Config = () => {
         sx={{
           left: drawerWidth,
           position: "relative",
-          "margin-left": theme.spacing(2),
         }}
       >
         {content}
