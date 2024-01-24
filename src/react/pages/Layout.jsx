@@ -1,19 +1,21 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useHref } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+// import styled from "@mui/material/styles/styled";
+import TabsTest from "./../components/TabsTest";
+import CssBaseline from "@mui/material/CssBaseline";
 //import Link from "./../../components/Link";
-import Button from "./../components/Button";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
-    primary: {
-      main: "#1976d2",
-    },
+    //    mode: "dark",
+    //    primary: {
+    //      main: "#1976d2",
+    //},
   },
   components: {
     MuiButton: {
@@ -29,24 +31,19 @@ const darkTheme = createTheme({
   },
 });
 const Layout = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(true);
+  console.log("layout" + useHref());
+  //  const Offset = styled("div")(({ theme }) => theme.mixins.toolbar);
+  //  const [anchorElNav, setAnchorElNav] = React.useState(true);
   return (
     <>
+      <CssBaseline />
       <ThemeProvider theme={darkTheme}>
-        <AppBar position="static">
+        <AppBar position="sticky">
           <Toolbar>
             <Typography>News</Typography>
-            <Box>
-              <Button href="/">Home</Button>
-              <Button href="/blogs">Blog</Button>
-              <Button href="/contact">Contact</Button>
-            </Box>
+            <TabsTest />
           </Toolbar>
         </AppBar>
-
-        <Button href="/">Home</Button>
-        <Button href="/blogs">blog</Button>
-        <Button href="/contact">contact</Button>
         <Outlet />
       </ThemeProvider>
     </>
