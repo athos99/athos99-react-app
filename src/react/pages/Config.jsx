@@ -11,6 +11,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { useTheme } from "@mui/material/styles";
 import MonTableau from "./rubriques/MonTableau";
+import MaGrille from "./rubriques/MaGrille";
 
 const drawerWidth = "180px";
 
@@ -33,10 +34,10 @@ const Config = () => {
   }
   let content = "";
   switch (rubrique) {
-    case "mail":
-      content = <h1>Mail</h1>;
+    case "ma_grille":
+      content = <MaGrille />;
       break;
-    case "inbox":
+    case "mon_tableau":
       content = <MonTableau />;
       break;
     default:
@@ -57,19 +58,19 @@ const Config = () => {
         <Divider />
         <List>
           <ListItem>
-            <ListItemButton onClick={() => handleClick("inbox")}>
+            <ListItemButton onClick={() => handleClick("ma_grille")}>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
-              <ListItemText primary="inbox" />
+              <ListItemText primary="Grille" />
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton onClick={() => handleClick("mail")}>
+            <ListItemButton onClick={() => handleClick("mon_tableau")}>
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <ListItemText primary="mail" />
+              <ListItemText primary="Tableau" />
             </ListItemButton>
           </ListItem>
         </List>
