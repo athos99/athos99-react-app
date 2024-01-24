@@ -77,7 +77,8 @@ const Config = () => {
       </Drawer>
       <Box
         sx={{
-          left: drawerWidth,
+          left: `calc(${drawerWidth} + 5px)`,
+          width: `calc(100% - 15px - ${drawerWidth})`,
           position: "relative",
         }}
       >

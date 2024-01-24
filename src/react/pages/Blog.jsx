@@ -18,14 +18,12 @@ const Blog = () => {
   }
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid xs={8}>
-          <Paper>xs=8</Paper>
-        </Grid>
-        {lines}
+    <Grid container spacing={2}>
+      <Grid xs={8}>
+        <Paper>xs=8</Paper>
       </Grid>
-    </Box>
+      {lines}
+    </Grid>
   );
 };
 
