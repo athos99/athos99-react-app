@@ -52,6 +52,7 @@ const Config = () => {
           sx: {
             top: "initial",
             width: drawerWidth,
+            padding: theme.spacing(1),
           },
         }}
       >
