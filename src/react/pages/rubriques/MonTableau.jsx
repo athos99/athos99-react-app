@@ -23,7 +23,7 @@ export default function MonTableau() {
       <Grid xs={8}>
         <p>xs=8</p>
       </Grid>
-      <Grid xs={8}>
+      <Grid xs={12}>
         <DataGrid
           columns={[
             { field: "id" },

@@ -12,6 +12,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import { useTheme } from "@mui/material/styles";
 import MonTableau from "./rubriques/MonTableau";
 import MaGrille from "./rubriques/MaGrille";
+import { padding } from "@mui/system";
 
 const drawerWidth = "180px";
 
@@ -52,12 +53,12 @@ const Config = () => {
           sx: {
             top: "initial",
             width: drawerWidth,
-            padding: theme.spacing(1),
+            padding: 0,
+            margin: 0,
           },
         }}
       >
-        <Divider />
-        <List>
+        <List dense={true} disablePadding={true}>
           <ListItem>
             <ListItemButton onClick={() => handleClick("ma_grille")}>
               <ListItemIcon>
@@ -81,6 +82,7 @@ const Config = () => {
           left: `calc(${drawerWidth} + 5px)`,
           width: `calc(100% - 15px - ${drawerWidth})`,
           position: "relative",
+          padding: theme.spacing(2),
         }}
       >
         {content}
