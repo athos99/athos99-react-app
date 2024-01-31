@@ -9,9 +9,11 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import { useTheme } from "@mui/material/styles";
 import MonTableau from "./rubriques/MonTableau";
 import MaGrille from "./rubriques/MaGrille";
+import MonChange from "./rubriques/MonChange";
 
 const drawerWidth = "180px";
 
@@ -40,6 +42,9 @@ const Config = () => {
     case "mon_tableau":
       content = <MonTableau />;
       break;
+    case "mon_change":
+      content = <MonChange />;
+      break;
     default:
       content = <h1>....</h1>;
       break;
@@ -56,7 +61,6 @@ const Config = () => {
           },
         }}
       >
-        <Divider />
         <List>
           <ListItem>
             <ListItemButton onClick={() => handleClick("ma_grille")}>
@@ -72,6 +76,14 @@ const Config = () => {
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Tableau" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton onClick={() => handleClick("mon_change")}>
+              <ListItemIcon>
+                <CurrencyExchangeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Change" />
             </ListItemButton>
           </ListItem>
         </List>
